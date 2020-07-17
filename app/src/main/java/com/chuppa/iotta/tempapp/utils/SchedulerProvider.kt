@@ -1,6 +1,7 @@
-package com.chuppa.iotta.app.model.utils
+package com.chuppa.iotta.tempapp.utils
 
-import io.reactivex.Scheduler
+import io.reactivex.rxjava3.core.Scheduler
+
 
 /**
  * Scheduler Provider interface for dagger.

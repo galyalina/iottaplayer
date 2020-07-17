@@ -1,7 +1,8 @@
-package com.chuppa.iotta.tempapp
+package com.chuppa.iotta.tempapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.chuppa.iotta.tempapp.R
 
 class MainActivity : AppCompatActivity() {
 

@@ -25,9 +25,17 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
     def dependencies = rootProject.ext.dependencies
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -45,6 +53,10 @@ dependencies {
     implementation dependencies.rxJava
     implementation dependencies.rxAndroid
     implementation dependencies.coreKtx
+    implementation dependencies.xFragmentKtx
+    implementation dependencies.xCollectionKtx
+    implementation dependencies.xViewModelKtx
+    implementation dependencies.reactivestreams
 
     // support
     implementation androidSupportDependencies.androidxLegacySupportV4
@@ -58,6 +70,7 @@ dependencies {
     implementation androidSupportDependencies.androidMaterial
 
     // Koin for Android
+
     implementation dependeciesinjection.koinAndroid
     // Koin Android Scope feature
     implementation dependeciesinjection.androidScope
@@ -68,12 +81,18 @@ dependencies {
     implementation dependeciesinjection.androidxScope
     // Koin AndroidX ViewModel feature
     implementation dependeciesinjection.androidxViewModel
+    implementation dependeciesinjection.koinFragment
+
+    implementation dependencies.okhttp
+    implementation dependencies.kotlinSerialization
+    implementation dependencies.okhttpLogging
 
     // Extra libs
     implementation dependencies.timber
     implementation dependencies.gson
     implementation dependencies.location
     implementation dependencies.locationPlay
+    implementation dependencies.picasso
 
     // Test
     // Required -- JUnit 4 framework

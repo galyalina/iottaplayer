@@ -1,6 +1,7 @@
-package com.chuppa.iotta.tempapp.domain.network.model
+package com.chuppa.iotta.tempapp.data.network.model
 
 data class User(
+        val imageUrl: String?,
         val login: String,
         val id: Long,
         val url: String,
